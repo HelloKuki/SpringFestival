@@ -1,0 +1,190 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5625vw;
+	font-family: "微软雅黑";
+}
+
+.music {
+	position: fixed;
+	top: 3vh;
+	right: 4vw;
+	width: 15vw;
+	height: 15vw;
+	z-index: 5;
+	border: 4px solid #ef1639;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.music>img:first-of-type {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 79%;
+}
+
+.music>img:last-of-type {
+	position: absolute;
+	top: 24%;
+	right: 2.5%;
+	width: 28.421%;
+}
+
+.rotate{
+	animation: rotate 6s linear infinite;
+	-webkit-animation: rotate 6s linear infinite;
+}
+
+
+.swiper-container,
+.page .bg {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	z-index: -5;
+}
+
+.page1>.bg {
+	background: url(../img/p1_bg.jpg) no-repeat center center;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+}
+
+.page2>.bg {
+	background: url(../img/p2_bg.jpg) no-repeat center center;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+}
+
+.page3>.bg {
+	background: url(../img/p3_bg.jpg) no-repeat center center;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+}
+
+.page1>.lantern {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 45vw;
+	height: 71.2vh;
+	margin: auto;
+	text-align: center;
+	background: url(../img/p1_lantern.png) no-repeat center center;
+	background-size: 100%;
+	box-sizing: border-box;
+	font-size: 6vw;
+	color: white;
+	line-height: 68vh;
+	-webkit-background-size: 100%;
+	-webkit-box-sizing: border-box;
+}
+
+.page1>.lantern:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	content: "";
+	margin: auto;
+	opacity: 0.9;
+	border-radius: 50%;
+	width: 30vw;
+	height: 30vw;
+	background-color: red;
+	box-shadow: 0 0 10vw 10vw red;
+	-webkit-box-shadow: 0 0 10vw 10vw red;
+	animation: lanternAnim 0.8s linear infinite alternate;
+	-webkit-animation: lanternAnim 0.8s linear infinite alternate;
+}
+
+.page1>.p1-imooc {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 8%;
+	margin: auto;
+	width: 30vw;
+}
+
+.page2>.p2-circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 70vw;
+	height: 70vw;
+	background: url(../img/p2_circle_outer.png) no-repeat center center;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+}
+
+.page2>.p2-circle:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	margin: auto;
+	width: 55vw;
+	height: 55vw;
+	background: url(../img/p2_circle_middle.png) no-repeat center center;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+}
+
+.page2>.p2-imooc {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 30vw;
+}
+
+
+/* Animation */
+
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes rotate{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes lanternAnim{
+	0%{}
+	100%{
+		opacity: 0.5;
+		transform: scale(0.8);
+	}
+}
+@-webkit-keyframes lanternAnim{
+	0%{}
+	100%{
+		opacity: 0.5;
+		-webkit-transform: scale(0.8);
+	}
+}

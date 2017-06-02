@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="css/index.css" />
+		<link type="text/css" rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+		<script type="text/javascript" src="http://www.jq22.com/jquery/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+	</head>
+
+	<body>
+
+		<div class="music">
+			<img id="musicpan" class="rotate" src="img/music_disc.png" />
+			<img src="img/music_pointer.png" />
+		</div>
+
+		<div class="swiper-container">
+
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide page page1">
+					<div class="bg"></div>
+					<div class="lantern">新春贺岁</div>
+					<img class="p1-imooc" src="img/p1_imooc.png" />
+				</div>
+				<div class="swiper-slide page page2">
+					<div class="bg"></div>
+					<div class="p2-circle"></div>
+					<img class="p2-imooc" src="img/p1_imooc.png" />
+
+				</div>
+				<div class="swiper-slide page page3">
+					<div class="bg"></div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<audio id="myAudio" src="http://so1.111ttt.com:8282/2015/1/06m/06/99060941326.m4a?tflag=1496388161&pin=ce3d2bc9cbe9836232d453196ad66463&ip=113.65.29.109#.mp3"></audio>
+
+		<script>
+			var myswiper = new Swiper('.swiper-container', {
+				direction: 'vertical'
+			});
+			var myaudio = document.getElementById("myAudio");
+
+			var $musicButton = $("#musicpan");
+			$musicButton.on("click", function(e) {
+				if(myaudio.paused) {
+					myaudio.play();
+					this.style.animationPlayState="running";
+				} else {
+					myaudio.pause();
+					this.style.animationPlayState="paused";
+				}
+			});
+		</script>
+
+	</body>
+
+</html>
